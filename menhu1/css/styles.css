@@ -1,0 +1,239 @@
+/*关于我们*/
+.banner1{
+	margin-top:20px;
+	height:300px;
+	border:1px solid grey;
+}
+.banner1>img{
+	width:958px;
+	height:300px;
+}
+.about_con{
+	
+	width: 100%;
+	/*max-height:800px;*/
+	/*height:1200px;*/
+	height: 100%;
+	display: flex;
+	border:1px solid gray;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	margin-top:10px;
+	/*border: 1px solid red;*/
+
+}
+.sidenav{
+	/*border:1px solid red;*/
+	margin:0px 0 0 10px; 
+	width:280px;
+	height:100%;
+	float: left;
+}
+.sidenav ul li>h3{
+	width:270px;
+	border:1px solid #72c8ed;
+	height:30px;
+	font-size:16px;
+	color:#0b3779;
+	line-height: 30px;
+	border-radius:5px;
+	padding-left: 10px;
+	background: #9cdaf9;
+}
+.sidenav>ul{
+	margin-top:20px;
+}
+.sidenav>ul>li{
+	margin-top:20px;
+}
+.subul{
+	margin-top:5px;
+}
+.subul li{
+	padding:10px 0 10px 20px;
+	border-bottom: 1px solid lightgrey;
+}
+.subul li>a{
+	/*padding-left: 20px;*/
+	font-size:14px;
+	font-weight: 700;
+}
+.subul li>a:hover{
+	color:#0b3779;
+	text-decoration: none;
+}
+.subul1>li{
+	margin-top:8px;
+}
+.subul1>li>a{
+	font-size:14px;
+	padding-left:20px;
+}
+.subul1>li>a:hover{
+	color:#0b3779;
+	text-decoration: underline;
+}
+[limg]>img{
+	margin-left:10px;
+	width:250px;
+	height:250px;
+}
+.sidecon{
+	width:650px;
+	height:100%;
+	margin-left: 20px;
+	float:right;
+}
+.aboutTop{
+	font-size:12px;
+	color:#666666;
+	margin-top:20px;
+}
+.aboutTop a{
+	font-size:12px;
+	color:#666666;
+}
+.aboutCon>h2{
+	margin-top:15px;
+	text-align: center;
+	font-size:18px;
+}
+/*.aboutCon>span{
+	display: block;
+	margin-top:15px;
+	font-size:13px;
+}*/
+[jyab]{
+	display: block;margin:10px auto;
+}
+/*研究机构*/
+.instit{
+	height:600px;
+}
+.sideinstit{
+	width:650px;
+	height:600px;
+	float:right;
+}
+.institution h2{
+	text-align: center;
+	margin-top:15px;
+	text-align: center;
+	font-size:18px;
+}
+.institution h3{
+	margin-top:20px;
+}
+.institution a{
+	display: inline-block;
+	font-size:14px;
+	padding-top:8px;
+}
+.institution a:hover{
+	text-decoration: underline;
+}
+/*科学技术*/
+.product{
+	width:645px;
+	margin-top:10px;
+	height:600px;
+	border-bottom: 1px solid lightgrey;
+}
+.product>li{
+	margin-right:20px;
+	width:195px;
+	height:200px;
+	float:left;
+
+}
+.product>li>a{
+	font-size:13px;
+}
+.product li img{
+	width:195px;
+	height:150px;
+	border:1px solid lightgrey;
+}
+.pagegroup{
+	margin:20px 0 0 140px;
+	font-size:12px;
+}
+.pagegroup>span{
+	border:1px solid grey;
+	font-size:12px;
+}
+[sn]{
+	width:15px;
+	height:15px;
+	text-align: center;
+	display: inline-block;
+}
+.active{
+	color:red;
+}
+[sn]:hover{
+	background:lightgrey;
+	border:1px solid black;
+}
+[xy]:hover{
+    background:lightgrey;
+	border:1px solid black;
+}
+.subul li ul{
+	display: none;
+}
+/*资讯中心*/
+.newsul{
+	margin-top:20px;
+	font-size:12px;
+}
+.newsul span{
+	float:right;
+	margin-right: 5px;
+}
+.newsul li{
+	padding:10px 0 5px 0;
+	border-bottom:1px solid lightgrey;
+}
+/*企业孵化*/
+.enterprise{
+	height: 560px;
+}
+.sideennav{
+	height:560px;
+}
+.sideenter{
+	height:560px;
+}
+/*联系我们*/
+[conimg]{
+	display: block;
+	margin:10px auto;
+}
+/*科技成果*/
+.firstnew{
+	padding-left:20px;
+	line-height:30px;
+	width:600px;
+}
+.firstnew li{
+	background:url(../image/dian.gif) repeat-x 0 bottom;
+}
+.firstnew li a{
+	font-size:10px;
+}
+.firstnew li>span{
+	font-size:10px;
+	float:right;
+}
+/*.firstnew li{
+	color:#666;
+	background:url(image/dian.gif) repeat-x 0 bottom;
+}
+.firstnew li a{
+	font-size:10px;
+}*/
+/*.firstnew li>span{
+	float:right;
+	margin-right:15px;
+}*/

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>科学技术</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="./js/jquery.js" type="text/javascript" charset="utf-8" ></script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<h1 class="logo"><a href="#"><img src="image/logo.jpg" alt="" height="60"></a></h1>
+			<div class="headerR">
+				<div class="headerF">
+					<a href="#">设为主页</a>
+					<a href="#">加入收藏</a>
+					<a href="#">网站地图</a>
+					<a href="#">邮箱登录</a>
+				</div>
+				<div class="clearFix"></div>
+				<div class="search">
+					<form action="">
+						<input type="text" class="searchInput" placeholder="输入关键字">
+						<input type="submit" class="searchBtn" value="搜索">
+					</form>
+				</div>
+				<!-- <div class="mail">
+					<form action="">
+						<table>
+							<tr>
+								<td>用户名:</td>
+								<td><label for=""><input type="text" class="textfield"></label></td>
+								<td>密码:</td>
+								<td><label for=""><input type="password" class="textfield"></label></td>
+								<td><input type="submit" class="Button" value="邮箱登录"></td>
+							</tr>
+						</table>
+					</form>
+				</div> -->
+			</div>	
+		</div>
+
+		<!-- 导航栏 -->
+		<div class="clearFix"></div>
+		<div class="navigation">
+			<ul class="menu">
+				<li class="menu-item"><a href="index.html">首页</a></li>
+				<li class="menu-item"><a href="about.html">关于我们</a></li>
+				<li class="menu-item"><a href="kjcg.html">科学技术</a></li>
+				<li class="menu-item"><a href="kjzy.html">技术转移</a></li>
+				<li class="menu-item"><a href="news.html">资讯中心</a></li>
+				<li class="menu-item"><a href="periodical.html">科技刊物</li>
+				<li class="menu-item"><a href="introductor.html">人力资源</a></li>
+				<li class="menu-item"><a href="contact.html">联系我们</a></li>
+		    </ul>
+		    <div class="times"><span  class="time"></span>&nbsp&nbsp<span class="time_1">???</span></div>
+		</div>
+
+		<!-- banner -->
+		<div class="banner1"><img src="image/banner.png" alt=""></div>
+
+		<!-- 概括 -->
+		<div class="about_con">
+			<div class="sidenav">
+				<ul>
+					<li>
+						<h3>科学技术</h3>
+						<ul class="subul">
+							<li class="wuli">
+								<a href="javascript:;">物理学</a>
+								<ul class="subitem">
+									<li><a href="">学科简介</a></li>
+									<li><a href="">研究进展</a></li>
+									<li><a href="">学术交流</a></li>
+									<li><a href="">国家重点实验室</a></li>
+									<li><a href="">科学装置</a></li>
+								</ul>
+							</li>
+							<li class="lixue">
+								<a href="javascript:;">力学与数学</a>
+								<ul class="subitem">
+									<li><a href="">学科简介</a></li>
+									<li><a href="">研究进展</a></li>
+									<li><a href="">学术交流</a></li>
+									<li><a href="">国家重点实验室</a></li>
+									<li><a href="">科学装置</a></li>
+								</ul>
+							</li>
+							<li class="huaxue">
+								<a href="javascript:;">化学与材料</a>
+								<ul class="subitem">
+									<li><a href="">学科简介</a></li>
+									<li><a href="">研究进展</a></li>
+									<li><a href="">学术交流</a></li>
+									<li><a href="">国家重点实验室</a></li>
+									<li><a href="">科学装置</a></li>
+								</ul>
+							</li>
+							<li class="dianzi">
+								<a href="javascript:;">信息科学与电子工程</a>
+								<ul class="subitem">
+									<li><a href="">学科简介</a></li>
+									<li><a href="">研究进展</a></li>
+									<li><a href="">学术交流</a></li>
+									<li><a href="">国家重点实验室</a></li>
+									<li><a href="">科学装置</a></li>
+								</ul>
+							</li>
+							<li class="guangxue">
+								<a href="javascript:;">光学与电气工程</a>
+								<ul class="subitem">
+									<li><a href="">学科简介</a></li>
+									<li><a href="">研究进展</a></li>
+									<li><a href="">学术交流</a></li>
+									<li><a href="">国家重点实验室</a></li>
+									<li><a href="">科学装置</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+
+					<li>
+						<h3>通知公告</h3>
+						<ul class="subul"><li class="gonggao"><a href="javascript:;">通知公告</a></li></ul>
+
+					</li>
+
+					<!-- <li>
+						<h3>资讯动态</h3>
+						<ul class="subul1">
+							<li><a href="#">我院成功举办“合同风险防范”专题...</a></li>
+							<li><a href="#">我院成功举办“合同风险防范”专题...</a></li>
+							<li><a href="#">我院成功举办“合同风险防范”专题...</a></li>
+							<li><a href="#">我院成功举办“合同风险防范”专题...</a></li>
+							<li><a href="#">我院成功举办“合同风险防范”专题...</a></li>
+							<li><a href="#">我院成功举办“合同风险防范”专题...</a></li>
+					    </ul>
+					</li> -->
+					<!-- <li limg><img style="width:100%;" src="image/sidebar.jpg" alt=""></li> -->
+				</ul>
+			</div>
+            <script>
+				$(function () {
+			      $(".subul>li").click(function(){
+			      	// $(this).children("ul").show().parent("li").siblings("li").find("ul").hide();
+			      	$(this).find(".subitem").slideToggle("fast");
+			      })
+
+			  });
+			</script>
+			<div class="sidecon">
+				<div class="aboutTop">当前位置:<a href="">首页</a> > <a href="">科学技术</a> <span class="res_1"> </span> <a class="result" href=""></a></div><hr>
+				<div class="institution">
+					<h2>科技成果</h2><hr>
+					<div class="keji">
+						<img src="image/jl.jpg" alt="" style="margin-top:10px;width:620px;display: block;margin:20px auto">
+						<p style="font-size:14px;line-height:25px">
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2005年，研究院与中国科学院联合申报的《神光Ⅱ高功率激光实验装置》项目获得国家科学技术进步奖二等奖。 <br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            截至2009年底，研究院获得国家自然科学奖4项、国家科技进步奖87项（含特等奖6项）、全国科学大会奖72项、部委级科技进步奖3200多项。 截至2012年6月，研究院共获国家技术发明奖71项，其中二等奖6项、三等奖32项、四等奖33项。 <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            2013年，研究院获国家技术发明奖二等奖1项，国家科技进步奖一等奖、二等奖各1项，与中国科学院联合申报项目获国家科技进步二等奖。 其中《神光II多功能高能激光系统》项目获国家科学技术进步奖二等奖。 <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            截至2016年7月，近五年来，中国工程物理研究院获得国家科技进步奖、国家自然科学奖等23项，军队科技进步奖570项。在纪念抗日战争胜利70周年阅兵式上，由中物院研制生产的多个武器装备接受了党和国家检阅。建成了神光Ⅲ、“聚龙一号”、“神龙二号”等一系列大科学试验装置，研发“低空卫士”激光拦截系统。
+						</p>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+
+		<!-- 友情链接 -->
+		<div class="clearFix"></div>
+		<div class="friendlink">
+			<table>
+				<tr>
+					<td>
+						<p style="color:#1678d1;font-size:14px;"><strong>友情链接:</strong></p>
+					</td>
+					<td>
+						<ul>
+							<li><a href="http://www.most.gov.cn/">国家科技部</a></li>
+							<li><a href="http://www.miit.gov.cn/n11293472/index.html">工业和信息化部</a></li>
+							<li><a href="http://www.cae.cn/">中国工程院</a></li>
+						</ul>
+					</td>
+					<td>&nbsp;&nbsp;
+						<select name="" id="" style="width:200px" onChange="window.open(this.value);">
+							<option value="">===相关链接===</option>
+							<option value="http://www.cas.ac.cn/">中国科学院</option>
+							<option value="http://www.iapcm.ac.cn/">北京应用物理与计算数学研究所</option>
+							<option value="http://www.csrc.ac.cn/zh/zxjj/">北京计算科学研究中心</option>
+							<option value="http://www.iphy.ac.cn/">中科院物理研究所</option>
+							<option value="http://www.spc-lab.org/">表面物理与化学重点实验室</option>
+							<option value="http://www.pku.edu.cn/">北京大学</option>
+							<option value="http://www.tsinghua.edu.cn/publish/th/index.html">清华大学</option>
+							<option value="http://www.fudan.edu.cn/">复旦大学</option>
+							<option value="http://www.ustc.edu.cn/">中国科技大学</option>
+							<option value="http://fund.caep.ac.cn/">中物院科学技术基金</option>
+							<option value="http://www.caep.ac.cn/mregister_caep/loginframe.asp">中物院会议注册系统</option>
+
+
+						</select>
+					</td>
+					<!-- <td>&nbsp;&nbsp;
+						<select name="" id="" style="width:200px">
+							<option value="">===直属单位===</option>
+							<option value="">航天科技有限公司</option>
+							<option value="">航天科技有限公司</option>
+							<option value="">航天科技有限公司</option>
+						</select>
+					</td> -->
+				</tr>
+			</table>
+		</div>
+
+		<div class="footer">
+			<ul class="footerul">
+				<li class="menu-item"><a href="index.html">首页</a></li>
+				<li class="menu-item"><a href="about.html">关于我们</a></li>
+				<li class="menu-item"><a href="kjcg.html">科学技术</a></li>
+				<li class="menu-item"><a href="kjzy.html">技术转移</a></li>
+				<li class="menu-item"><a href="news.html">资讯中心</a></li>
+				<li class="menu-item"><a href="periodical.html">科技刊物</li>
+				<li class="menu-item"><a href="introductor.html">人力资源</a></li>
+				<li class="menu-item"><a href="contact.html">联系我们</a></li>
+			</ul>
+			<p>中国工程物理研究院<span>&copy;</span>版权所有　   地址：四川省绵阳市绵山路64号      邮编：621900      <br> 
+             
+            <a href="http://www.miibeian.gov.cn">[蜀ICP备11018116号]</a>
+            </P>
+            <p>
+            	今日:234&nbsp;&nbsp;
+            	昨日:234&nbsp;&nbsp;
+            	本月:234&nbsp;&nbsp;
+            	全部:234
+            </p>
+		</div>
+
+	</div>
+	
+	<script src="./js/style.js"></script>
+	<script  type="text/javascript">
+
+		var gonggao='<h2 class="h_2">通知公告</h2><hr><p text>&nbsp; &nbsp; 教育事业</p> <br><div><img src="image/30.jpg" style="font-size: 15px;" alt="" /></div><div><img src="image/30.jpg" style="font-size: 15px;" alt="" /></div><div><img src="image/30.jpg" style="font-size: 15px;" alt="" /></div><div><img src="image/30.jpg" style="font-size: 15px;" alt="" /></div>'
+		$(".gonggao").click(function(){
+			$(".res_1").text(">");
+			$(".result").text("通知公告");
+			$(".institution").html("");
+			$(".institution").html(gonggao);
+			$("title").text($(".h_2").text())
+		});
+
+		var wuli='<h2 class="h_2">物理学</h2><hr><p text>&nbsp; &nbsp; 最前沿的人力信息</p> <br> <div><img src="image/30.jpg" style="font-size: 15px;" alt="" /></div>'
+		$(".wuli").click(function(){
+			$(".res_1").text(">");
+			$(".result").text("物理学");
+			$(".institution").html("");
+			$(".institution").html(wuli);
+			$("title").text($(".h_2").text())
+		});
+
+		var lixue='<h2 class="h_2">力学与数学</h2><hr><p text>&nbsp; &nbsp; 这是最新的主题招聘博士后信息</p> <br> <div><img src="image/10.jpg" style="font-size: 15px;" alt="" /></div><div><img src="image/30.jpg" style="font-size: 15px;" alt="" /></div>'
+		$(".lixue").click(function(){
+			$(".res_1").text(">");
+			$(".result").text("力学与数学");
+			$(".institution").html("");
+			$(".institution").html(lixue);
+			$("title").text($(".h_2").text())
+		});
+
+		var huaxue='<h2 class="h_2">化学与材料</h2><hr><p text>&nbsp; &nbsp; 我有最新的动态</p> <br> <div><img src="image/10.jpg" style="font-size: 15px;" alt="" /></div><div><img src="image/30.jpg" style="font-size: 15px;" alt="" /></div>'
+		$(".huaxue").click(function(){
+			$(".res_1").text(">");
+			$(".result").text("化学与材料");
+			$(".institution").html("");
+			$(".institution").html(huaxue);
+			$("title").text($(".h_2").text())
+		});
+
+		var dianzi='<h2 class="h_2">信息科学与电子工程</h2><hr><p text>&nbsp; &nbsp; 听见我的声音</p> <br> <div><img src="image/10.jpg" style="font-size: 15px;" alt="" /></div><div><img src="image/30.jpg" style="font-size: 15px;" alt="" /></div>'
+		$(".dianzi").click(function(){
+			$(".res_1").text(">");
+			$(".result").text("信息科学与电子工程");
+			$(".institution").html("");
+			$(".institution").html(dianzi);
+			$("title").text($(".h_2").text())
+		});
+
+		var guangxue='<h2 class="h_2">光学与电气工程</h2><hr><p text>&nbsp; &nbsp; 看见光</p> <br> <div><img src="image/10.jpg" style="font-size: 15px;" alt="" /></div><div><img src="image/30.jpg" style="font-size: 15px;" alt="" /></div>'
+		$(".guangxue").click(function(){
+			$(".res_1").text(">");
+			$(".result").text("光学与电气工程");
+			$(".institution").html("");
+			$(".institution").html(guangxue);
+			$("title").text($(".h_2").text())
+		});
+
+		
+			
+
+			// $(".subul1").on("click","li",function(){
+			// 	console.log(111)
+			// })
+	</script>
+</body>
+</html>
