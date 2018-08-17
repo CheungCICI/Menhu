@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>资讯中心</title>
+        <link rel="stylesheet" href="/public/index/css/style.css">
+        <link rel="stylesheet" href="/public/index/css/styles.css">
+        <link rel="stylesheet" href="/public/index/css/search.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <script src="/public/index/js/header.js"></script>
+
+            <!-- banner -->
+            <div class="tu"><img src="/public/index/image/banner.png" alt=""></div>
+
+            <!-- 概括 -->
+            <div class="about">
+                <div class="cents">
+                    <p class="ss">搜索：{$name}</p>
+                      <p tit>为你搜索到：</p>   
+                        <ul class="lists">
+                             {foreach $list as $val}                            
+                             <li class="por">
+                                 <span><a href="news_show?id={$val['id']}">{$val["title"]}</a></span>  
+                             </li>
+                        {/foreach}
+                        </ul>
+                </div>
+            </div>
+
+            <!-- 友情链接 -->
+              <script src="/public/index/js/footer.js"></script>
+
+        </div>
+        <script src="/public/index/js/jquery.js" type="text/javascript" charset="utf-8" ></script>
+        <script src="/public/index/js/style.js"></script>
+        <!--<script src="/public/index/js/pagination.min.js"></script>-->
+        <!--<script src="/public/index/js/pags.js"></script>-->
+        
+        <script type="text/javascript">
+
+//          $( ".lists" ).each(function( index ) {
+//           
+//            console.log( index + ": " + $( this ).text() );
+//          });
+              var b=$(".ss").text();
+             var c=$(".lists").text().replace(b,"<font style=color:red>"+b+" </font>");
+                   $("lists").html(c)
+          
+
+          
+   
+        </script>
+    </body>
+</html>

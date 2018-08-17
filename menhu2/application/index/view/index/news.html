@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>资讯中心</title>
+        <link rel="stylesheet" href="/public/index/css/style.css">
+        <link rel="stylesheet" href="/public/index/css/styles.css">
+        <!--<link rel="stylesheet" href="/public/index/css/pags.css">-->
+        <link rel="stylesheet" href="/public/index/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <script src="/public/index/js/header.js"></script>
+
+            <!-- banner -->
+            <div class="banner1"><img src="/public/index/image/banner.png" alt=""></div>
+
+            <!-- 概括 -->
+            <div class="about_con">
+                <div class="sidenav">
+                    <ul>
+                        <li>
+                            <h3>资讯中心</h3>
+                            <ul class="subul">
+                                <li class="new"><a href="#">要闻</a></li>
+                                <li class="gy"><a href="#">社会公益</a></li>
+                                <li class="wh"><a href="#">文化建设</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3>资讯动态</h3>
+                            <ul class="subul1">
+                                 {foreach $list as $val}
+                                 <li style="height:20px;overflow: hidden;font-size: 14px;">
+                                        <span ><a href="news_show?id={$val['id']}">{$val["title"]}</a></span>       
+                                 </li>
+                            {/foreach}
+                            </ul>
+                        </li>
+                        <li limg><img src="/public/index/image/sidebar.jpg" alt=""></li>
+                    </ul>
+                </div>
+                <div class="sidecon">
+                    <div class="aboutTop">当前位置:<a href="">首页</a> > <a href="">资讯中心</a> > <a href=""  class="result">要闻</a> </div><hr>
+                    <div class="aboutCon">
+<!--                        <ul class="newsul cc">                      
+                        </ul>-->
+                    <!--<div class="pag" style="margin-top:20px;">  当前第<span class="yeshu">1</span>页</div>-->
+                    <ul class="newsul cc">
+                        {foreach $lists as $val}
+                        <li><a href="/index/index/index_show?id={$val['id']}"> {$val.title}</a></li>
+                        {/foreach} 
+                    </ul>
+                    </div>
+                    {$lists->render()}
+                </div>
+            </div>
+
+            <!-- 友情链接 -->
+        <script src="/public/index/js/footer.js"></script>
+        </div>
+        <script src="/public/index/js/jquery.js" type="text/javascript" charset="utf-8" ></script>
+        <script src="/public/index/js/style.js"></script>
+         <!--<script src="/public/index/js/bootstrap.mim.js"></script>-->
+        <!--<script src="/public/index/js/pagination.min.js"></script>-->
+        <!--<script src="/public/index/js/pags.js"></script>-->
+        <script>
+
+                    var gy = '<h2 class="h_2">要闻</h2><hr><p text>&nbsp; &nbsp; 要闻</p> <br><div><img src="/public/index/image/30.jpg" style="font-size: 15px;" alt="" /></div>'
+                    $(".new").click(function () {
+                        // console.log($(this).text());
+                        $(".result").text("要闻");
+                        $(".aboutCon").html("");
+                        $(".aboutCon").html(gy);
+                        $("title").text($(".h_2").text())
+                    });
+
+
+//                                $(".subul1>li").click(function () {
+//                                    console.log($(this).index());
+//                                    $(".result").text("文化建设");
+//                                    $(".aboutCon").html("");
+//                                    $(".aboutCon").html(wh);
+//                                    $("title").text($(".h_2").text());
+//
+//                                });
+//
+//                                $(".newsul>li").click(function () {
+//                                    console.log($(this).index());
+//                                    $(".result").text("返回");
+//                                    $(".aboutCon").html("");
+//                                    $(".aboutCon").html(wh);
+//                                    $("title").text($(".h_2").text());
+//
+//                                });
+
+        </script>
+    </body>
+</html>

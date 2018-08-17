@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>资讯中心</title>
+	<link rel="stylesheet" href="/public/index/css/style.css">
+	<link rel="stylesheet" href="/public/index/css/styles.css">
+	<link rel="stylesheet" href="/public/index/css/details.css">
+</head>
+<body>
+	<div class="wrapper">
+		<script src="/public/index/js/header.js"></script>
+
+		<!-- banner -->
+		<div class="tu"><img src="/public/index/image/banner.png" alt=""></div>
+
+		<!-- 概括 -->
+		<div class="about">
+			<div class="top">当前位置:&nbsp&nbsp<a href="">资讯中心</a> > <a href=""  class="result">详情</a> </div>
+			<hr>
+			<div class="texts">
+                            {foreach $list as $val}
+                            <p sp1>{$val["title"]}</p>
+                               <p pp>
+                                   <span sp2>发布者:{$val["author"]}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;发布时间:{$val["publishtime"]}</span>
+                               </p>  
+                               <hr class="hr">
+				 <!--<hr>--> 
+				<div class="contens">
+                                    <div class="xinwen">
+                                      {$val["content"]}   
+                                    </div>                                 
+				</div>
+                            {/foreach}
+					<!-- 		<div class="page">
+						<div class="pagegroup">
+							<span>共13 页 页次:1/13 页</span>
+							<span>首页</span>
+							<span>上一页</span>
+							<span sn><a href="" class="active">1</a></span>
+							<span sn><a href="">2</a></span>
+							<span sn><a href="">3</a></span>
+							<span sn><a href="">4</a></span>
+							<span sn><a href="">5</a></span>
+							<span xy><a href="">下一页</a></span>
+							<span xy><a href="">尾页</a></span>&nbsp;&nbsp;
+							转到&nbsp;&nbsp;<select name="" id="">
+								    <option value="">1</option>
+								    <option value="">2</option>
+								    <option value="">3</option>
+                                    <option value="">4</option>
+								    <option value="">5</option>
+							    </select>
+						</div>
+					</div>  -->
+			</div>
+		</div>
+
+		<!-- 友情链接 -->
+		<!-- <div class="clearFix"></div> -->
+		<script src="/public/index/js/footer.js"></script>
+
+
+
+
+	</div>
+	<script src="/public/index/js/jquery.js" type="text/javascript" charset="utf-8" ></script>
+	<script src="/public/index/js/style.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+.pagination>li{
+            float:left;
+            list-style: none;
+            margin-left:10px;
+		}
+.pagination>li>a{
+        display: block;
+        width:20px;
+        height:20px;
+        border:1px solid grey;
+        text-align: center;
+        text-decoration: none;
+}
+.pagination>li>a:hover{
+        background-color: lightblue;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>科技转移</title>
+        <link rel="stylesheet" href="/public/index/css/style.css">
+        <link rel="stylesheet" href="/public/index/css/styles.css">
+        <!--<link rel="stylesheet" href="/public/index/css/pags.css">-->
+        <link rel="stylesheet" href="/public/index/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <script src="/public/index/js/header.js"></script>
+
+            <!-- banner -->
+            <div class="banner1"><img src="/public/index/image/banner.png" alt=""></div>
+
+            <!-- 概括 -->
+            <div class="about_con">
+                <div class="sidenav">
+                    <ul>
+                        <li>
+                            <h3>技术转移</h3>
+                            <ul class="subul">
+                                <li><a href="javascript:">交流合作</a></li>
+                                <li><a  href="javascript:">国家核技术工业应用工程技术研究中心</a></li>
+                                <li><a  href="javascript:">国家x射线数字化成像仪器中心</a></li>
+                                <li><a  href="javascript:">国家城市污水处理及资源化工程技术研究中心</a></li>
+                            </ul>
+                        </li>
+                        <li limg><img src="/public/index/image/sidebar.jpg" alt=""></li>
+                    </ul>
+                </div>
+                <div class="sidecon">
+                    <div class="aboutTop">当前位置:<a href="">首页</a> > <a href="javascript:;">技术转移</a> <span class="res"></span> <a href="" class="result"></a> </div>
+                    <hr>
+                    <div class="aboutCon">
+                        <div class="zixun1"> 
+                            <ul class="newsul cc">
+                            {foreach $lists as $val}
+                            <li><a href="/index/index/index_show?id={$val['id']}"> {$val.title}</a></li>
+                            {/foreach} 
+                        </ul>
+                        {$lists->render()}
+                        </div>
+                        <div class="zixun" style="width:100%;height:100%;display:none">
+                            <ul class="newsul dd">
+                        </ul>
+                            <div class="pags">共计:<span class="pag_1">?</span>条记录</div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- 友情链接 -->
+        <script src="/public/index/js/footer.js"></script>
+        </div>
+        <script src="/public/index/js/jquery.js" type="text/javascript" charset="utf-8" ></script>
+        <script src="/public/index/js/style.js"></script>
+        <script>
+
+
+                $(".subul>li").click(function(){
+//                console.log($(this).text());
+//                console.log($(this).index()+1);
+                    $(".dd li").remove();
+                    $(".res").text(">");
+                    $(".result").text($(this).text());
+                    $(".zixun1").css("display","none");
+                    $(".zixun").css("display","block");
+                    $("title").text($(".h_2").text());
+                       $.ajax({
+                            url:"/index/index/kjzy_show",
+                            data:{
+                                sort:$(this).index()+1
+                            },
+                            success:function(da){
+                              var len=da.data.length;
+//                               console.log(da);
+        //                     console.log(da.data[0].title);
+                              for(var i=0; i<len; i++){                                             
+        //                        console.log(da.data[i].title+"1111");
+                                $(".dd").append("<li><a href=news_show?id="+da.data[i].id+">"+da.data[i].title+"</a> <span>"+da.data[i].publishtime+"</span></li>"); 
+
+                               }
+                               $(".pag_1").text(da.total);
+
+                            }
+
+                        })
+                });
+
+        </script>
+    </body>
+</html>

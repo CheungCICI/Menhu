@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>科学技术</title>
+        <link rel="stylesheet" href="/public/index/css/style.css">
+        <link rel="stylesheet" href="/public/index/css/styles.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <script src="/public/index/js/header.js"></script>
+
+            <!-- banner -->
+            <div class="banner1"><img src="/public/index/image/banner.png" alt=""></div>
+
+            <!-- 概括 -->
+            <div class="about_con">
+                <div class="sidenav">
+                    <ul>
+                        <li>
+                            <h3>科学技术</h3>
+                            <ul class="subul">
+                                {foreach $list1 as $val} 
+                                <li class="xueke">
+                                    <a class="sel" href="javascript:;">{$val.name}</a>
+                                    <ul class="subitem">
+                                        <li><a href="/index/index/kjcg_show?id={$val['id']}&sort=1" target="myiframe">学科简介</a></li>
+                                        <li><a href="/index/index/kjcg_show?id={$val['id']}&sort=2" target="myiframe">研究进展</a></li>
+                                        <li><a href="/index/index/kjcg_show?id={$val['id']}&sort=3" target="myiframe">学术交流</a></li>
+                                        <li><a href="/index/index/kjcg_show?id={$val['id']}&sort=4" target="myiframe">国家重点实验室</a></li>
+                                        <li><a href="/index/index/kjcg_show?id={$val['id']}&sort=5" target="myiframe">科学装置</a></li>
+                                    </ul>
+                                </li>
+                                {/foreach}
+                            </ul>
+                        </li>
+
+<!--                        <li>
+                            <h3>通知公告</h3>
+                            <ul class="subul"><li class="gonggao"><a href="javascript:;">通知公告</a></li></ul>
+
+                        </li>-->
+
+                        <!--<li limg><img style="width:100%;" src="image/sidebar.jpg" alt=""></li>--> 
+                    </ul>
+                </div>
+
+                <div class="sidecon">
+                    <div class="aboutTop">当前位置:<a href="">首页</a> > <a href=""><span class="res">科学技术</span></a> <span class="res_1"> </span> <a class="result" href=""></a></div><hr>
+
+
+
+                    <div class="keji">
+                        <div class="keji1">
+                            <img src="/public/index/image/abpc.jpg" alt="" style="width: 100%;height: 200px;">
+                            <p style="font-size:14px;line-height:25px">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2005年，研究院与中国科学院联合申报的《神光Ⅱ高功率激光实验装置》项目获得国家科学技术进步奖二等奖。 <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                截至2009年底，研究院获得国家自然科学奖4项、国家科技进步奖87项（含特等奖6项）、全国科学大会奖72项、部委级科技进步奖3200多项。 截至2012年6月，研究院共获国家技术发明奖71项，其中二等奖6项、三等奖32项、四等奖33项。 <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                2013年，研究院获国家技术发明奖二等奖1项，国家科技进步奖一等奖、二等奖各1项，与中国科学院联合申报项目获国家科技进步二等奖。 其中《神光II多功能高能激光系统》项目获国家科学技术进步奖二等奖。 <br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                截至2016年7月，近五年来，中国工程物理研究院获得国家科技进步奖、国家自然科学奖等23项，军队科技进步奖570项。在纪念抗日战争胜利70周年阅兵式上，由中物院研制生产的多个武器装备接受了党和国家检阅。建成了神光Ⅲ、“聚龙一号”、“神龙二号”等一系列大科学试验装置，研发“低空卫士”激光拦截系统。
+                            </p>
+                        </div>
+                        <iframe frameborder="0" align="left" name="myiframe" id="myframe" src="" scrolling="no" width="100%" height="0" ">
+                        </iframe>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+            <!-- 友情链接 -->
+            <script src="/public/index/js/footer.js"></script>
+
+        </div>
+        <script src="/public/index/js/jquery.js" type="text/javascript" charset="utf-8" ></script>
+
+        <script src="/public/index/js/style.js"></script>
+        <script  type="text/javascript">
+//console.log("{$list2.title}")
+                                //下拉菜单样式  
+                                $(function () {
+                                    $(".subul .sel").click(function () {
+                                        // $(this).children("ul").show().parent("li").siblings("li").find("ul").hide();
+                                        console.log($(this).text())
+                                        $(this).parent().find(".subitem").slideToggle("fast");
+                                        $(".res").text($(this).text());
+                                        $(".res_1").text("");
+                                        $(".result").text("");
+                                    })
+                                });
+                                //下拉自选项的位置索引 
+                               
+                                $(".subitem li a").click(function () {
+                                     var cc= $("#myframe").height();
+                                    
+                                      console.log(cc);
+                                    //console.log($(this).index());
+                                    $(".keji1").css("display", "none");
+                                    $("#myframe").css("display", "block");
+
+                                    $(".res_1").text(">");
+                                    $(".result").text($(this).text());
+                                    $("title").text($(this).text());
+
+                                 
+                                });
+                                //公告栏
+//                                var gonggao = '<h2 class="h_2">通知公告</h2><hr><p text>&nbsp; &nbsp; 教育事业</p> <br><div><img src="/public/index/image/30.jpg" style="font-size: 15px;" alt="" /></div><div><img src="image/30.jpg" style="font-size: 15px;" alt="" /></div><div><img src="/public/index/image/30.jpg" style="font-size: 15px;" alt="" /></div>'
+                                $(".gonggao").click(function () {
+                                    $(".res").text($(this).text());
+                                    $(".res_1").text("");
+                                    $(".result").text("");
+//                                    $(".keji1").html("");
+//                                    $(".keji1").html("通知公告");
+                                    $("title").text($(this).text())
+                                });
+
+                                   
+
+        </script>
+    </body>
+</html>

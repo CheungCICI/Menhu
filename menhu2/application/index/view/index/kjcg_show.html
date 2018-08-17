@@ -1,0 +1,29 @@
+
+<style type="text/css" >
+    .h{
+        margin: 0 auto;
+        text-align: center;
+    }
+    .b{
+        margin: 0;
+        padding: 0;
+    }
+    .b img{
+        width: 100%;
+
+    }
+</style>
+<body onload="IFrameResize()">
+    <h3 class="h">{$list2.title}</h3>
+    <hr>
+    <div class="b">{$list2.content}</div>
+</body>
+<script>
+    function IFrameResize() {
+         parent.document.getElementById("myframe").height=0;
+
+parent.document.getElementById("myframe").height=document.body.scrollHeight;
+    }
+    
+
+</script>
